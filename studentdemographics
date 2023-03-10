@@ -80,7 +80,7 @@ SELECT
     
 FROM student s	
 
-"Using table joins to collect all demographic information."
+/*Using table joins to collect all demographic information*/
 
 INNER JOIN POSEligibility pos ON s.personID = pos.personID AND pos.endyear = 2023 AND pos.enddate = '2023-06-30'
 LEFT OUTER JOIN Lep l ON s.personID = l.personID
@@ -93,12 +93,12 @@ AND s.endDate IS NULL
 AND schoolid IN (1,2,6,8,10,11,14,15) --all the schools within the district
 
 GROUP BY 
-	  s.endyear,
+    s.endyear,
     s.personid,
     s.gender,
     s.grade,
     s.calendarName,
-	  s.raceEthnicityFed,
+    s.raceEthnicityFed,
     e.specialedstatus,
     e.residentDistrict,
     pos.eligibility,
