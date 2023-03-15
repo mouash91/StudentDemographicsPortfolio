@@ -86,7 +86,7 @@ FROM student s
 
 INNER JOIN POSEligibility pos ON s.personID = pos.personID AND pos.endyear = 2023 AND pos.enddate = '2023-06-30'
 LEFT OUTER JOIN Lep l ON s.personID = l.personID
-INNER JOIN Enrollment e ON s.enrollmentID = e.enrollmentID AND e.endyear = 2023
+INNER JOIN Enrollment e ON s.enrollmentID = e.enrollmentID AND e.endyear = 2023 AND e.startdate <= getdate()
 INNER JOIN v_MembershipAttendanceDetail mem ON s.personID = mem.personID AND mem.calendarID in (403,400,393,394,396,395,410,398,399)
 
 WHERE s.endyear = 2023 --students enrolled in 2022-2023 school year
