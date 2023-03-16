@@ -27,7 +27,7 @@ CASE
         ELSE ''
         END AS raceethnicity,
 
-/*converts the "resident" field from an integer data type to text data type and then displays the top cities where students live*/
+/*converts the "resident" field from an integer data type to text data type and then displays the top cities where students reside*/
 	
 CASE
 	WHEN e.residentdistrict = '000603' THEN 'South St. Paul'
@@ -42,7 +42,7 @@ CASE
 /*displays free/reduce lunch eligibility*/
 
 CASE
-	WHEN pos.eligibility = 'S' THEN 'None'
+	WHEN pos.eligibility = 'S' THEN 'Paid'
 	WHEN pos.eligibility = 'F' THEN 'Free'
 	WHEN pos.eligibility = 'R' THEN 'Reduced'
 	ELSE''
@@ -55,7 +55,7 @@ CASE
 	ELSE '0.00'
 	END AS elstatus,
 
-/*convert int to text and displays whether students are enrolling within resident district our outside*/
+/*convert int to text and displays whether students are enrolling from within resident district our outside*/
 	
 CASE 
 	WHEN e.stateaid = '00' THEN 'Regular'
