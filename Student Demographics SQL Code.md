@@ -1,11 +1,5 @@
-/* 
-Student Demographics
-
-Skills used:
-SELECT statement, JOIN statements (INNER JOIN and LEFT OUTER JOIN), CASE statements for conditional logic, Aggregate function (SUM), Conversion functions (CAST and ROUND)
-and GROUP BY statement for grouping data based on specified columns
-*/
-
+```sql
+/* Student Demographics*/
 
 SELECT 
         s.endyear,
@@ -106,4 +100,4 @@ GROUP BY
         pos.eligibility,
         e.stateaid,
         l.programstatus
-
+```
